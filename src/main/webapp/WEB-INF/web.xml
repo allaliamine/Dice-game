@@ -3,4 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
+
+
+
+    <filter>
+        <filter-name>SignInChecker</filter-name>
+        <filter-class>org.app.dicegame.web.Filters.SignInChecker</filter-class>
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>SignInChecker</filter-name>
+        <url-pattern>/play</url-pattern>
+        <url-pattern>/scoreTable</url-pattern>
+        <url-pattern>/connect?*</url-pattern>
+    </filter-mapping>
+
+
 </web-app>
